@@ -1,6 +1,15 @@
 #include <iostream>
 #include <string>
+
+#ifdef __APPLE__
+#include "OpenGL/gl.h"
+#include "OpenGL/glu.h"
+#include "OpenGL/glext.h"
+#else
 #include "GL/glew.h"
+#endif
+
+
 #include "SDL2/SDL.h"
 
 void CheckSDLError(int line = -1);
